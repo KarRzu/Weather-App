@@ -1,0 +1,269 @@
+body {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+.mobile-phone {
+  margin: auto;
+  margin-top: 50px;
+  padding: 10px 10px 30px;
+  width: 300px;
+  height: 600px;
+  box-shadow: 0 0 20px #e2e2e2;
+  border-radius: 30px;
+}
+
+.brove {
+  width: 150px;
+  height: 20px;
+  background: white;
+  position: absolute;
+  margin: 0 100px;
+  border-radius: 0 0 20px 20px;
+}
+
+.speaker {
+  width: 60px;
+  height: 5px;
+  background: #d2d2d2;
+  display: block;
+  margin: auto;
+  margin-top: 5px;
+  border-radius: 20px;
+}
+
+.screen {
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, rgb(56, 100, 228) 18%, rgb(129, 82, 158) 100%);
+  border-radius: 30px;
+  overflow-y: auto;
+}
+.screen .loader {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 8px solid #514b82;
+  animation: l20-1 0.8s infinite linear alternate, l20-2 1.6s infinite linear;
+  animation: l20-1 0.8s infinite linear alternate, l20-2 1.6s infinite linear;
+  position: fixed;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -40%);
+}
+@keyframes l20-1 {
+  0% {
+    -webkit-clip-path: polygon(50% 50%, 0 0, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+            clip-path: polygon(50% 50%, 0 0, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+  }
+  12.5% {
+    -webkit-clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%);
+            clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%);
+  }
+  25% {
+    -webkit-clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%);
+            clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%);
+  }
+  50% {
+    -webkit-clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);
+            clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);
+  }
+  62.5% {
+    -webkit-clip-path: polygon(50% 50%, 100% 0, 100% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);
+            clip-path: polygon(50% 50%, 100% 0, 100% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);
+  }
+  75% {
+    -webkit-clip-path: polygon(50% 50%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 100%, 0% 100%);
+            clip-path: polygon(50% 50%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 100%, 0% 100%);
+  }
+  100% {
+    -webkit-clip-path: polygon(50% 50%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 0% 100%);
+            clip-path: polygon(50% 50%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 0% 100%);
+  }
+}
+@keyframes l20-2 {
+  0% {
+    transform: scaleY(1) rotate(0deg);
+  }
+  49.99% {
+    transform: scaleY(1) rotate(135deg);
+  }
+  50% {
+    transform: scaleY(-1) rotate(0deg);
+  }
+  100% {
+    transform: scaleY(-1) rotate(-135deg);
+  }
+}
+.screen header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  padding: 15px;
+  margin-top: 25px;
+}
+.screen header i {
+  font-size: 15px;
+  color: gainsboro;
+  cursor: pointer;
+}
+.screen header .container {
+  width: 180px;
+  position: relative;
+}
+.screen header .container input {
+  height: 25px;
+  width: 180px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+}
+.screen header .container .autocomplete-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-height: 150px;
+  overflow-y: auto;
+  position: absolute;
+  top: 30px;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.screen header .container .autocomplete-list li {
+  color: white;
+  padding: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 12px;
+}
+.screen .section-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+.screen .section-1 .temp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.screen .section-1 .temp p:nth-of-type(2) {
+  margin-top: -60px;
+}
+.screen .section-1 .temp p:nth-of-type(1) {
+  transform: translateY(-60%);
+  font-size: 40px;
+}
+.screen .section-1 img {
+  width: 90px;
+}
+.screen .section-1 .detailsWeather {
+  width: 290px;
+  height: 70px;
+  background-color: white;
+  border-radius: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+.screen .section-1 .detailsWeather .details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 90px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.screen .section-1 .detailsWeather .details p:nth-of-type(1) {
+  transform: translateY(80%);
+}
+.screen .section-1 .detailsWeather .details p:nth-of-type(2) {
+  transform: translateY(-60%);
+}
+.screen .section-2 {
+  margin-top: 10px;
+}
+.screen .section-2 .textParagraph {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.screen .section-2 .textParagraph p {
+  font-size: 13px;
+  cursor: pointer;
+}
+.screen .section-2 .forecastsWeather {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+.screen .section-2 .forecastsWeather .weatherDiv {
+  transform: translateY(10%);
+  width: 40px;
+  height: 80px;
+  padding: 10px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: 0.4s;
+  cursor: pointer;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.screen .section-2 .forecastsWeather .weatherDiv img {
+  width: 35px;
+}
+.screen .section-2 .forecastsWeather .weatherDiv p {
+  transform: translateY(-40%);
+  font-size: 13px;
+}
+.screen .section-2 .forecastsWeather .weatherDiv .weatherDivDays {
+  transform: translateY(-160%);
+  font-size: 12px;
+}
+.screen .section-2 .forecastsWeather .weatherDiv:hover {
+  background-color: #e2e2e2;
+  color: black;
+}
+.screen footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  width: 300px;
+  height: 50px;
+  background-color: black;
+  margin-top: 37px;
+}
+.screen footer .footerIcon {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+.screen footer .footerIcon i {
+  font-size: 15px;
+  color: gainsboro;
+  cursor: pointer;
+}
+.screen footer .footerIcon:hover {
+  background-color: white;
+}/*# sourceMappingURL=style.css.map */

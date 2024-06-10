@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/d9bcbe140c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="mobile-phone">
+      <div class="brove"><span class="speaker"></span></div>
+      <div class="screen">
+        <!-----Display weather------->
+        <header>
+          <i class="fa-solid fa-bars"></i>
+          <div class="container">
+            <input
+              type="text"
+              placeholder="Search City"
+              id="inputElement"
+              autocomplete="off"
+            />
+            <ul class="autocomplete-list" id="autocomplete-list"></ul>
+          </div>
+          <i class="fa-regular fa-bell"></i>
+        </header>
+
+        <div class="section-1">
+          <img src="image/drizzle.png" alt="icon" />
+          <div class="temp">
+            <p>29 C</p>
+            <p>Sunny</p>
+          </div>
+          <div class="detailsWeather">
+            <div class="details">
+              <p>18 km/h</p>
+              <p>Wind</p>
+            </div>
+            <div class="details">
+              <p>1014 mbar</p>
+              <p>Pressure</p>
+            </div>
+            <div class="details">
+              <p>32%</p>
+              <p>Humidity</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-2">
+          <div class="textParagraph">
+            <p>Today</p>
+          </div>
+
+          <div class="forecastsWeather">
+            <div class="weatherDiv">
+              <img src="image/clouds.png" alt="icon" />
+              <p>21 c</p>
+              <p class="weatherDivDays">Sat</p>
+            </div>
+
+            <div class="weatherDiv">
+              <img src="image/clouds.png" alt="icon" />
+              <p>21 c</p>
+              <p class="weatherDivDays">Sat</p>
+            </div>
+
+            <div class="weatherDiv">
+              <img src="image/clouds.png" alt="icon" />
+              <p>21 c</p>
+              <p class="weatherDivDays">Sat</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="loader"></div>
+
+          <footer>
+            <div  class="footerIcon"><i class="fa-solid fa-house"></i></div>
+            <div class="footerIcon"><i class="fa-solid fa-map"></i></div>
+            <div class="footerIcon"><i class="fa-solid fa-gear"></i></div>
+            <div class="footerIcon">
+              <i class="fa-solid fa-user"></i>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="user.js"></script>
+    <script src="start.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+  </body>
+</html>

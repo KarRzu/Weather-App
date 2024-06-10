@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+.mobile-phone {
+  margin: auto;
+  margin-top: 50px;
+  padding: 10px 10px 30px;
+  width: 300px;
+  height: 600px;
+  box-shadow: 0 0 20px #e2e2e2;
+  border-radius: 30px;
+}
+
+.screen {
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+    circle,
+    rgba(56, 100, 228, 1) 18%,
+    rgba(129, 82, 158, 1) 100%
+  );
+  border-radius: 30px;
+  overflow-y: auto;
+}
+
+.brove {
+  width: 150px;
+  height: 20px;
+  background: white;
+  position: absolute;
+  margin: 0 100px;
+  border-radius: 0 0 20px 20px;
+}
+
+.speaker {
+  width: 60px;
+  height: 5px;
+  background: #d2d2d2;
+  display: block;
+  margin: auto;
+  margin-top: 5px;
+  border-radius: 20px;
+}
+
+/////Started website with login/////
+
+.startedWeb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 120px;
+  .startedIcon {
+    width: 120px;
+  }
+
+  h1:nth-of-type(2) {
+    margin-top: -20px;
+  }
+
+  button {
+    width: 130px;
+    height: 35px;
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 20px;
+    transition: background-color 0.4s, transform 0.4s;
+    background-color: white;
+  }
+
+  button:hover {
+    background-color: #81529e;
+    transform: scale(1.05);
+    color: white;
+  }
+
+  a {
+    margin-top: 30px;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: white;
+  }
+}
