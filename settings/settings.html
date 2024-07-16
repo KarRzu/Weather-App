@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings</title>
+    <link rel="stylesheet" href="settings.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d9bcbe140c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="smartphone">
+      <div class="content">
+        <h1>Settings</h1>
+        <div class="nav-items">
+          <a href="#"><i class="fa-regular fa-user"></i>Profile</a>
+          <a href="#"><i class="fa-solid fa-map"></i>Location</a>
+          <a href="#"><i class="fa-regular fa-heart"></i>Favorities</a>
+          <a href="#"><i class="fa-solid fa-bell"></i>Alerts</a>
+          <a href="/index.html"
+            ><i class="fa-solid fa-right-from-bracket"></i>Log out</a
+          >
+
+          <div>
+            <input type="checkbox" class="checkbox" id="checkbox" />
+            <label for="checkbox" class="checkbox-label">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+              <span class="ball"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    const checkbox = document.getElementById("checkbox");
+    checkbox.addEventListener("change", () => {
+      document.body.classList.toggle("dark");
+    });
+  </script>
+</html>

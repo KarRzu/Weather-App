@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="signUp.css" />
+
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <div class="smartphone">
+      <div class="content">
+        <form id="signUp">
+          <div
+            id="signUpMessage"
+            class="messageDiv"
+            style="display: none"
+          ></div>
+          <h1>Sign up</h1>
+          <p>
+            Enter information to create <br />
+            a new account
+          </p>
+          <div class="input-container">
+            <input type="email" placeholder="Email" id="signUpEmail" />
+            <input type="password" placeholder="Password" id="signUpPassword" />
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              id="signUpConfirmPassword"
+            />
+          </div>
+          <button id="submitSignUp">Create account</button>
+          <div class="link">
+            <p>Already have an account?</p>
+            <a href="/sign-in/signIn.html" id="signInButton">Sign in</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="/firebase/firebaseAuthSignUp.js"></script>
+  </body>
+</html>

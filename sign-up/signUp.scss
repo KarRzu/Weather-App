@@ -1,0 +1,109 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: whitesmoke;
+  background-color: rgb(156, 164, 194);
+}
+
+.smartphone {
+  position: relative;
+  width: 300px;
+  height: 520px;
+  margin: auto;
+  border: 16px black solid;
+  border-top-width: 60px;
+  border-bottom-width: 60px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.smartphone:before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 5px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #333;
+  border-radius: 50px;
+}
+
+.smartphone .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 520px;
+  background: rgb(13, 18, 55);
+  background: linear-gradient(
+    0deg,
+    rgba(13, 18, 55, 1) 51%,
+    rgba(17, 19, 106, 1) 69%,
+    rgba(103, 103, 213, 1) 94%
+  );
+  background-size: cover;
+
+  #signUp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    p {
+      text-align: center;
+    }
+
+    .messageDiv {
+      background-color: hsl(327, 90%, 28%);
+      color: white;
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 5px;
+      font-size: 1rem;
+      opacity: 0;
+      animation: fadeOut 7s forwards;
+    }
+
+    .input-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+      input {
+        width: 270px;
+        height: 30px;
+        border-radius: 4px;
+        border: none;
+        outline: none;
+      }
+    }
+
+    .forgot-password {
+      margin-left: 160px;
+      margin-top: 15px;
+      display: block;
+    }
+
+    button {
+      width: 270px;
+      height: 40px;
+      border-radius: 4px;
+      background-color: rgba(220, 220, 220, 0.2);
+      cursor: pointer;
+      border: 1px solid white;
+      color: white;
+      margin-top: 30px;
+    }
+
+    .link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+}

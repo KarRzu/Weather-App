@@ -1,0 +1,89 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: whitesmoke;
+}
+
+.smartphone {
+  position: relative;
+  width: 300px;
+  height: 520px;
+  margin: auto;
+  border: 16px black solid;
+  border-top-width: 60px;
+  border-bottom-width: 60px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+/* The horizontal line on the top of the device */
+.smartphone:before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 5px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #333;
+  border-radius: 50px;
+}
+
+/* The screen (or content) of the device */
+.smartphone .content {
+  width: 300px;
+  height: 520px;
+  background: linear-gradient(135deg, #e7eaf6 0%, #a2a8d3 25%, #38598b 50%, #113f67 100%);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.smartphone .content .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.smartphone .content .header input {
+  height: 26px;
+  width: 190px;
+  border-radius: 5px;
+  outline: none;
+  background-color: rgba(220, 220, 220, 0.8);
+  border: none;
+  margin: 20px;
+}
+.smartphone .content .header .arrow-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: rgba(220, 220, 220, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.smartphone .content .header .arrow-icon i {
+  color: white;
+}
+.smartphone .content .container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.smartphone .content .container .items-container {
+  display: flex;
+  gap: 100px;
+  width: 250px;
+  margin-top: 15px;
+  background-color: rgba(220, 220, 220, 0.5);
+  border-radius: 6px;
+}
+.smartphone .content .container .items-container .description {
+  margin-left: 20px;
+}
+.smartphone .content .container .items-container img {
+  margin-top: 20px;
+  width: 30%;
+  height: 60%;
+}/*# sourceMappingURL=location.css.map */
