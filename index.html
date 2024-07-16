@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/d9bcbe140c.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="smartphone">
+      <div class="content">
+        <div class="slide">
+          <i
+            class="fa-solid fa-bars"
+            id="menuToggle"
+            onclick="onClickMenu()"
+          ></i>
+          <ul id="nav">
+            <li>
+              <a href="#"><i class="fa-regular fa-user"></i>Profile</a>
+            </li>
+            <li>
+              <a href="settings/settings.html"
+                ><i class="fa-solid fa-gears"></i>Settings</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="fa-regular fa-heart"></i>Saved</a>
+            </li>
+            <li>
+              <a href="location/location.html"
+                ><i class="fa-solid fa-map"></i>Location</a
+              >
+            </li>
+            <li>
+              <a href="/sign-in/signIn.html" id="logOut"
+                ><i class="fa-solid fa-arrow-right-from-bracket"></i>Log out</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="loader"></div>
+        <header>
+          <input type="text" placeholder="Search..." id="inputElement" />
+          <i class="fa-regular fa-heart"></i>
+        </header>
+
+        <div class="main-container">
+          <p id="date"></p>
+          <p class="name">Berlin</p>
+          <img src="src/mist.png" alt="icon-weather" />
+          <h1>27°</h1>
+          <p class="description">cloudy</p>
+
+          <div class="widgets-weather">
+            <div class="weather-div">
+              <div>
+                <p class="element">9km/h</p>
+                <p class="element-weather">Wind</p>
+              </div>
+              <div>
+                <p class="element">1014 mbar</p>
+                <p class="element-weather">Pressure</p>
+              </div>
+              <div>
+                <p class="element">32%</p>
+                <p class="element-weather">Humidity</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="display-day">
+          <p>Today</p>
+          <p>Next 7 days <i class="fa-solid fa-arrow-right"></i></p>
+        </div>
+
+        <div class="weekly-forecast-element">
+          <div class="contener-forecast">
+            <p>Mon</p>
+            <img src="src/mist.png" alt="icon" />
+            <p class="temp">33°</p>
+          </div>
+          <div class="contener-forecast">
+            <p>Tue</p>
+            <img src="src/mist.png" alt="icon" />
+            <p class="temp">33°</p>
+          </div>
+          <div class="contener-forecast">
+            <p>Wedn</p>
+            <img src="src/mist.png" alt="icon" />
+            <p class="temp">33°</p>
+          </div>
+          <div class="contener-forecast">
+            <p>Thu</p>
+            <img src="src/mist.png" alt="icon" />
+            <p class="temp">33°</p>
+          </div>
+          <div class="contener-forecast">
+            <p>Fri</p>
+            <img src="src/mist.png" alt="icon" />
+            <p class="temp">33°</p>
+          </div>
+          <div class="contener-forecast">
+            <p>Sat</p>
+            <img src="src/mist.png" alt="icon" />
+            <p class="temp">33°</p>
+          </div>
+          <div class="contener-forecast">
+            <p>Sun</p>
+            <img src="src/mist.png" alt="icon" />
+            <p class="temp">33°</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+    <script type="module" src="/firebase/firebaseAuthSignUp.js"></script>
+    <script type="module" src="/firebase/firebaseAuthSignIn.js"></script>
+  </body>
+</html>
