@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Weather-App-new-version
 
 weather-app-new-version
@@ -22,4 +22,4 @@ Here are some typical features and functionalities of a weather app:
   <li>Current Conditions: Displays the current temperature, humidity, wind speed, and other relevant data for the user's location or a specified location.</li>
   <li>Hourly and Daily Forecasts: Provides forecasts for the upcoming hours and days, including predicted temperatures, precipitation chances, and weather conditions (e.g., sunny, cloudy, rainy).</li>
 </ul>
->>>>>>> a173b056d56f302707dfc28ff13e0a80eae32aeb
+
