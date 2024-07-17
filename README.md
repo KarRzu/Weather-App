@@ -1,8 +1,5 @@
 
-# Weather-App-new-version
 
-weather-app-new-version
-=======
 :globe_with_meridians: <b>Weather App</b>
 
 Overview The Weather App is a web application that provides current weather information and forecasts for any city in the world. It uses the OpenWeatherMap API to fetch weather data and displays it in a user-friendly interface. <b>This application is still in the development process</b>
