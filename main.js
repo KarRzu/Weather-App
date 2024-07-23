@@ -1,5 +1,5 @@
 const apiKey = "eeedf5b379e04d670399db6116a6549a";
-const inputElement = document.getElementById("inputElement");
+const inputElement = document.getElementById("country-input");
 const iconSrc = document.getElementById("iconSrc");
 const mainContainer = document.querySelector(".main-container");
 const cityName = inputElement.value;
@@ -255,3 +255,64 @@ function displayRandomWeather() {
 }
 
 document.addEventListener("DOMContentLoaded", displayRandomWeather);
+let countries = [];
+const container = document.querySelector(".container");
+const countryList = document.querySelector("#autocomplete-list");
+
+function fetchCountries() {
+  fetch("https://restcountries.com/v3.1/all")
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("Fetched countries:", data);
+      countries = data.map((x) => x.name.common);
+      countries.sort();
+      loadData(countries, countryList);
+    })
+    .catch((error) => {
+      console.error("Error fetching countries:", error);
+    });
+}
+
+function loadData(data, element) {
+  if (data && element) {
+    element.innerHTML = ""; // Clear existing list items
+    const content = data.map((item) => `<li>${item}</li>`).join("");
+    element.innerHTML = content; // Set new list items
+  }
+}
+
+function filterData(data, searchText) {
+  return data.filter((x) => {
+    return x.toLowerCase().includes(searchText.toLowerCase());
+  });
+}
+
+function renderResults(results) {
+  if (!results.length) {
+    countryList.style.display = "none";
+  } else {
+    countryList.style.display = "block";
+    loadData(results, countryList);
+  }
+}
+
+inputElement.addEventListener("keyup", (e) => {
+  const input = inputElement.value;
+  let results = [];
+  if (input.length) {
+    results = filterData(countries, input);
+  }
+  renderResults(results);
+});
+
+countryList.addEventListener("click", function (event) {
+  if (event.target.tagName === "LI") {
+    inputElement.value = event.target.textContent;
+    fetchWeather(inputElement.value);
+    getForecastWeatherData(inputElement.value);
+    countryList.style.display = "none";
+  }
+});
+
+// Call fetchCountries() to load the countries initially
+fetchCountries();

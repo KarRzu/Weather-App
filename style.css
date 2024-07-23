@@ -150,14 +150,45 @@ body {
   padding: 20px;
   background-color: #a2a8d3;
 }
-.smartphone .content header input {
-  height: 22px;
-  border-radius: 5px;
-  outline: none;
-  background-color: rgba(220, 220, 220, 0.8);
+.smartphone .content header .container {
+  width: 180px;
+  margin-top: -10px;
+  position: relative;
+}
+.smartphone .content header .container input {
+  height: 25px;
+  width: 180px;
+  border-radius: 15px;
   border: none;
-  margin-left: 50px;
-  z-index: 1;
+  outline: none;
+  margin-left: 40px;
+}
+.smartphone .content header .container #autocomplete-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-height: 150px;
+  margin-left: 45px;
+  position: absolute;
+  top: 120%;
+  left: 0;
+  z-index: 1000;
+  background-color: grey;
+  overflow-y: auto;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.3);
+  display: none;
+}
+.smartphone .content header .container #autocomplete-list li {
+  cursor: pointer;
+  padding: 5px;
+  transition: 0.5s ease;
+}
+.smartphone .content header #autocomplete-list li:hover {
+  background-color: #f0f0f0;
+  color: black;
 }
 .smartphone .content .main-container {
   transform: translateY(-10px);

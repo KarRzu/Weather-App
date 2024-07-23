@@ -62,7 +62,11 @@
 
         <div class="loader"></div>
         <header>
-          <input type="text" placeholder="Search..." id="inputElement" />
+          <div class="container">
+            <input type="text" placeholder="Search..." id="country-input" />
+            <ul id="autocomplete-list"></ul>
+          </div>
+
           <i class="fa-regular fa-heart"></i>
         </header>
 
@@ -136,7 +140,7 @@
       </div>
     </div>
     <script src="main.js"></script>
-    <script type="module" src="/firebase/firebaseAuthSignUp.js"></script>
-    <script type="module" src="/firebase/firebaseAuthSignIn.js"></script>
+    <!-- <script type="module" src="/firebase/firebaseAuthSignUp.js"></script>
+    <script type="module" src="/firebase/firebaseAuthSignIn.js"></script> -->
   </body>
 </html>
